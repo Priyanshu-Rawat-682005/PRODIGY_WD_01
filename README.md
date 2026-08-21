@@ -61,7 +61,3 @@ wavefold-v2/
 - Add Web Audio API support so turning the knobs produces actual audio output.
 - Add preset buttons (like "Warm Bell", "Overdrive", "Pure Sine") to quickly set knob positions.
 - Save user knob settings in `localStorage` so they stay set when reloading the page.
-
-## Author
-
-Priyanshu
