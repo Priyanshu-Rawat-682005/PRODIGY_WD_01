@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wavefold — Modular for people who solder their own patience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<nav class="nav" id="nav">
+  <div class="nav-brand"><span class="led" id="navLed"></span>WAVEFOLD</div>
+  <div class="nav-links" id="navLinks">
+    <a href="#modules" class="active" data-color="amber">Modules</a>
+    <a href="#process" data-color="violet">Build</a>
+    <a href="#voices" data-color="teal">Voices</a>
+    <a href="#preorder" data-color="ember">Preorder</a>
+    <span class="nav-cable" id="navCable"></span>
+  </div>
+  <a href="#preorder" class="nav-cta">Reserve — $612</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+
+<header class="hero" id="heroSection">
+  <div class="hero-spotlight" id="heroSpotlight"></div>
+  <div class="eyebrow"><span class="rule"></span>Eurorack · 14HP · Complex Oscillator</div>
+  <h1>Fold the wave<br>until it <span class="accent">breaks</span>.</h1>
+  <p class="lede">Wavefold is a single module that turns a plain sine into anything from a gentle harmonic bell to a shredded, aliasing scream — under voltage control, in real time, with your hands on the panel. Try the knobs below — they drive the actual waveform.</p>
+  <div class="hero-actions">
+    <a href="#preorder" class="btn-primary">Reserve yours — $612</a>
+    <a href="#modules" class="btn-ghost">See the panel</a>
+  </div>
+
+  <div class="patchbay">
+    <div class="wave-wrap">
+      <svg viewBox="0 0 760 90" preserveAspectRatio="none">
+        <path id="wavePath" fill="none" stroke="#f5a83c" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <div class="wave-labels"><span id="foldReadout">FOLD 00</span><span>50Hz — 4kHz</span><span>CV: ±5V</span></div>
+    </div>
+    <div class="knob-row">
+      <div class="knob-unit" data-param="fold">
+        <div class="knob" id="knobFold" role="slider" aria-label="Fold amount" tabindex="0" style="--rot:-135deg"></div>
+        <label>FOLD</label>
+        <span class="knob-val" id="valFold">0%</span>
+      </div>
+      <div class="knob-unit" data-param="shape">
+        <div class="knob" id="knobShape" role="slider" aria-label="Shape bias" tabindex="0" style="--rot:0deg"></div>
+        <label>SHAPE</label>
+        <span class="knob-val" id="valShape">0%</span>
+      </div>
+      <div class="knob-unit" data-param="drive">
+        <div class="knob" id="knobDrive" role="slider" aria-label="Drive gain" tabindex="0" style="--rot:-70deg"></div>
+        <label>DRIVE</label>
+        <span class="knob-val" id="valDrive">30%</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="modules" id="modules">
+  <div class="section-head">
+    <div class="eyebrow"><span class="rule"></span>The Panel</div>
+    <h2>Three controls. No menus.</h2>
+    <p>Everything that matters lives under a knob, not inside a submenu. Wavefold is built the way the good modules always were — direct, physical, and a little dangerous at full gain.</p>
+  </div>
+  <div class="module-grid">
+    <div class="module-card">
+      <span class="module-index mono">01 / FOLD</span>
+      <h3>Wavefolder core</h3>
+      <p>Analog folding stage with up to 9 reflections, driven by a discrete transistor ladder tuned by ear, not by simulation.</p>
+      <div class="module-spec"><span>CV IN</span><span>ATTEN</span><span>±5V</span></div>
+    </div>
+    <div class="module-card">
+      <span class="module-index mono">02 / SHAPE</span>
+      <h3>Symmetry bias</h3>
+      <p>Skews the fold asymmetrically to push even harmonics forward — the difference between a bell and a buzz.</p>
+      <div class="module-spec"><span>BIPOLAR</span><span>0–100%</span></div>
+    </div>
+    <div class="module-card">
+      <span class="module-index mono">03 / DRIVE</span>
+      <h3>Input gain</h3>
+      <p>Pushes any signal into fold range, so a quiet LFO and a screaming VCO both find their way to the ladder.</p>
+      <div class="module-spec"><span>×1 – ×40</span><span>SOFT CLIP</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="process-step">
+    <span class="num mono">01</span>
+    <h4>Hand-populated boards</h4>
+    <p>Every board is placed and reflowed in a 9-person shop, then hand-soldered for through-hole pots and jacks.</p>
+  </div>
+  <div class="process-step">
+    <span class="num mono">02</span>
+    <h4>Burned in for 48 hours</h4>
+    <p>Each unit runs a fold-and-sweep test loop for two days before it's allowed to ship.</p>
+  </div>
+  <div class="process-step">
+    <span class="num mono">03</span>
+    <h4>Calibrated by hand</h4>
+    <p>Trimmers are set against a reference module, not a spec sheet — panel to panel, they should feel identical.</p>
+  </div>
+  <div class="process-step">
+    <span class="num mono">04</span>
+    <h4>Packed with the patch</h4>
+    <p>Ships with three patch cables and a card showing the panel-original starting patch, printed, not a QR code.</p>
+  </div>
+</section>
+
+<section class="quote-section" id="voices">
+  <div class="quote">
+    <span class="quote-mark">"</span>I stopped reaching for plugins for this sound entirely. It's the only fold that still sounds like something when you overdrive it into noise.
+    <div class="quote-attr">— B. OKAFOR, MODULAR SYNTHESIS WORKSHOP, LONDON</div>
+  </div>
+</section>
+
+<section class="cta-section" id="preorder">
+  <div class="eyebrow"><span class="rule"></span>Batch 04 · Ships October</div>
+  <h2>72 units left in this run.</h2>
+  <p class="lede" style="margin-bottom:34px;">Reserve now and we'll email you the day your unit is calibrated and boxed — not before.</p>
+  <div class="hero-actions" style="margin-bottom:0;">
+    <a href="#" class="btn-primary">Reserve yours — $612</a>
+    <a href="#modules" class="btn-ghost">Back to the panel</a>
+  </div>
+</section>
+
+<footer>
+  <div>WAVEFOLD INSTRUMENTS · MADE IN A SHOP, NOT A FACTORY</div>
+  <div class="foot-links">
+    <a href="#modules">Modules</a>
+    <a href="#process">Build</a>
+    <a href="#voices">Voices</a>
+    <a href="#preorder">Preorder</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
